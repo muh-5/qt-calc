@@ -59,13 +59,14 @@ double get_result(double fr_num, double fs_num, char opt)
 void QtCalc::on_pushButton_clicked()
 {
 	if (opt == '=') {
-		opt = '+';
+		last_opt = opt ='+';
+		s_num = 0;
 	} else if (opt != '\0') {
 		r_num = get_result(r_num, s_num, opt);
 		s_num = 0;
-		opt = '+';
+		last_opt = opt ='+';
 	} else {
-		opt = '+';
+		last_opt = opt ='+';
 		r_num = s_num;
 		s_num = 0;
 	}
@@ -75,13 +76,14 @@ void QtCalc::on_pushButton_clicked()
 void QtCalc::on_pushButton_2_clicked()
 {
 	if (opt == '=') {
-		opt = '-';
+		last_opt = opt ='-';
+		s_num = 0;
 	}else if (opt != '\0') {
 		r_num = get_result(r_num, s_num, opt);
 		s_num = 0;
-		opt = '-';
+		last_opt = opt ='-';
 	} else {
-		opt = '-';
+		last_opt = opt ='-';
 		r_num = s_num;
 		s_num = 0;
 	}
@@ -91,13 +93,14 @@ void QtCalc::on_pushButton_2_clicked()
 void QtCalc::on_pushButton_3_clicked()
 {
 	if (opt == '=') {
-		opt = '*';
+		last_opt = opt ='*';
+		s_num = 0;
 	} else if (opt != '\0') {
 		r_num = get_result(r_num, s_num, opt);
 		s_num = 0;
-		opt = '*';
+		last_opt = opt ='*';
 	} else {
-		opt = '*';
+		last_opt = opt ='*';
 		r_num = s_num;
 		s_num = 0;
 	}
@@ -107,13 +110,14 @@ void QtCalc::on_pushButton_3_clicked()
 void QtCalc::on_pushButton_4_clicked()
 {
 	if (opt == '=') {
-		opt = '/';
+		last_opt = opt ='/';
+		s_num  = 0;
 	} else if (opt != '\0') {
 		r_num = get_result(r_num, s_num, opt);
 		s_num = 0;
-		opt = '/';
+		last_opt = opt ='/';
 	} else {
-		opt = '/';
+		last_opt = opt ='/';
 		r_num = s_num;
 		s_num = 0;
 	}
@@ -122,6 +126,11 @@ void QtCalc::on_pushButton_4_clicked()
 /* 1 action */
 void QtCalc::on_pushButton_5_clicked()
 {
+	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 1);
 	ui->label->setText(QString::number(s_num));
 }
@@ -129,7 +138,11 @@ void QtCalc::on_pushButton_5_clicked()
 
 /* 2 action */
 void QtCalc::on_pushButton_6_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 2);
 	ui->label->setText(QString::number(s_num));
 
@@ -137,7 +150,11 @@ void QtCalc::on_pushButton_6_clicked()
 
 /* 3 action */
 void QtCalc::on_pushButton_7_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 3);
 	ui->label->setText(QString::number(s_num));
 
@@ -145,7 +162,11 @@ void QtCalc::on_pushButton_7_clicked()
 
 /* 4 action */
 void QtCalc::on_pushButton_8_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 4);
 	ui->label->setText(QString::number(s_num));
 
@@ -153,7 +174,11 @@ void QtCalc::on_pushButton_8_clicked()
 
 /* 5 action */
 void QtCalc::on_pushButton_9_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 5);
 	ui->label->setText(QString::number(s_num));
 
@@ -161,7 +186,11 @@ void QtCalc::on_pushButton_9_clicked()
 
 /* 6 action */
 void QtCalc::on_pushButton_10_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 6);
 	ui->label->setText(QString::number(s_num));
 
@@ -169,7 +198,11 @@ void QtCalc::on_pushButton_10_clicked()
 
 /* 7 action */
 void QtCalc::on_pushButton_11_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 7);
 	ui->label->setText(QString::number(s_num));
 
@@ -177,7 +210,11 @@ void QtCalc::on_pushButton_11_clicked()
 
 /* 8 action */
 void QtCalc::on_pushButton_12_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 8);
 	ui->label->setText(QString::number(s_num));
 
@@ -185,7 +222,11 @@ void QtCalc::on_pushButton_12_clicked()
 
 /* 9 action */
 void QtCalc::on_pushButton_15_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 9);
 	ui->label->setText(QString::number(s_num));
 
@@ -193,7 +234,11 @@ void QtCalc::on_pushButton_15_clicked()
 
 /* 0 action */
 void QtCalc::on_pushButton_14_clicked()
-{
+{	if (opt == '=') {
+		s_num = 0;
+		r_num = 0;
+		opt = '\0';
+	}
 	s_num = append_num(s_num, 0);
 	ui->label->setText(QString::number(s_num));
 
@@ -209,13 +254,14 @@ void QtCalc::on_pushButton_13_clicked()
 void QtCalc::on_pushButton_16_clicked()
 {
 	if (opt == '=') {
-		opt = '^';
+		last_opt = opt ='^';
+		s_num = 0;
 	} else if (opt != '\0') {
 		r_num = get_result(r_num, s_num, opt);
 		s_num = 0;
-		opt = '^';
+		last_opt = opt ='^';
 	} else {
-		opt = '+';
+		last_opt = opt ='+';
 		r_num = s_num;
 		s_num = 0;
 	}
@@ -226,7 +272,7 @@ void QtCalc::on_pushButton_17_clicked()
 {
 	s_num = 0;
 	r_num = 0;
-	opt = '\0';
+	last_opt = opt ='\0';
 	ui->label->setText(QString::number(s_num));
 }
 
@@ -239,10 +285,12 @@ void QtCalc::on_pushButton_19_clicked()
 /* equal action */
 void QtCalc::on_pushButton_20_clicked()
 {
-	if (opt != '\0')
+	if (opt == '=')
+		r_num = get_result(r_num, s_num, last_opt);
+	else if (opt != '\0')
 		r_num = get_result(r_num, s_num, opt);
 	ui->label->setText(QString::number(r_num));
-	s_num = 0;
-	opt = '=';
+	//s_num = 0;
+	opt ='=';
 }
 

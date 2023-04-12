@@ -17,6 +17,7 @@ public:
 	double s_num = 0.0;
 	double r_num = 0.0;
 	char opt = '\0';
+	char last_opt = '\0';
 	QString list;
 	bool dot_flag = false;
 private slots:
