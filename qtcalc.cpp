@@ -56,7 +56,7 @@ double get_result(double fr_num, double fs_num, char opt)
 /* end of user functions space */
 
 /* plus action */
-void QtCalc::on_pushButton_clicked()
+void QtCalc::on_pushButton_21_clicked()
 {
 	if (opt == '=') {
 		last_opt = opt ='+';
@@ -308,4 +308,6 @@ void QtCalc::on_pushButton_20_clicked()
 	//s_num = 0;
 	opt ='=';
 }
+
+
 
