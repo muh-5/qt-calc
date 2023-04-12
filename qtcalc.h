@@ -18,6 +18,7 @@ public:
 	double r_num = 0.0;
 	char opt = '\0';
 	QString list;
+	bool dot_flag = false;
 private slots:
 	void on_pushButton_clicked();
 

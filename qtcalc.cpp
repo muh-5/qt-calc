@@ -202,6 +202,7 @@ void QtCalc::on_pushButton_14_clicked()
 /* dot '.' action */
 void QtCalc::on_pushButton_13_clicked()
 {
+	dot_flag = !dot_flag;
 }
 
 /* power action */
