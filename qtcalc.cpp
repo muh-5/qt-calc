@@ -289,6 +289,7 @@ void QtCalc::on_pushButton_17_clicked()
 	r_num = 0;
 	last_opt = opt ='\0';
 	ui->label->setText(QString::number(s_num));
+	list.clear();
 }
 
 /* list button */
@@ -307,6 +308,9 @@ void QtCalc::on_pushButton_20_clicked()
 	ui->label->setText(QString::number(r_num));
 	//s_num = 0;
 	opt ='=';
+	list.append(" = ");
+	list.append(QString::number(r_num));
+	list.append(" , ");
 }
 
 
