@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "calclist.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class QtCalc; }
 QT_END_NAMESPACE
@@ -20,6 +22,8 @@ public:
 	char last_opt = '\0';
 	QString list;
 	bool dot_flag = false;
+
+	Calclist *w_calclist = new Calclist(this);
 private slots:
 	void on_pushButton_clicked();
 

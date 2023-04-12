@@ -279,7 +279,7 @@ void QtCalc::on_pushButton_17_clicked()
 /* list button */
 void QtCalc::on_pushButton_19_clicked()
 {
-
+	w_calclist->show();
 }
 
 /* equal action */
