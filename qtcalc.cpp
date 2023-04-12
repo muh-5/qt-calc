@@ -70,6 +70,7 @@ void QtCalc::on_pushButton_clicked()
 		r_num = s_num;
 		s_num = 0;
 	}
+	list.append(" + ");
 }
 
 /* minus action */
@@ -87,6 +88,7 @@ void QtCalc::on_pushButton_2_clicked()
 		r_num = s_num;
 		s_num = 0;
 	}
+	list.append(" - ");
 }
 
 /* multi action */
@@ -104,6 +106,7 @@ void QtCalc::on_pushButton_3_clicked()
 		r_num = s_num;
 		s_num = 0;
 	}
+	list.append(" * ");
 }
 
 /* div action */
@@ -121,6 +124,7 @@ void QtCalc::on_pushButton_4_clicked()
 		r_num = s_num;
 		s_num = 0;
 	}
+	list.append(" / ");
 }
 
 /* 1 action */
@@ -133,6 +137,7 @@ void QtCalc::on_pushButton_5_clicked()
 	}
 	s_num = append_num(s_num, 1);
 	ui->label->setText(QString::number(s_num));
+	list.append("1");
 }
 
 
@@ -146,6 +151,7 @@ void QtCalc::on_pushButton_6_clicked()
 	s_num = append_num(s_num, 2);
 	ui->label->setText(QString::number(s_num));
 
+	list.append("2");
 }
 
 /* 3 action */
@@ -158,6 +164,7 @@ void QtCalc::on_pushButton_7_clicked()
 	s_num = append_num(s_num, 3);
 	ui->label->setText(QString::number(s_num));
 
+	list.append("3");
 }
 
 /* 4 action */
@@ -170,6 +177,7 @@ void QtCalc::on_pushButton_8_clicked()
 	s_num = append_num(s_num, 4);
 	ui->label->setText(QString::number(s_num));
 
+	list.append("4");
 }
 
 /* 5 action */
@@ -182,6 +190,7 @@ void QtCalc::on_pushButton_9_clicked()
 	s_num = append_num(s_num, 5);
 	ui->label->setText(QString::number(s_num));
 
+	list.append("5");
 }
 
 /* 6 action */
@@ -193,6 +202,7 @@ void QtCalc::on_pushButton_10_clicked()
 	}
 	s_num = append_num(s_num, 6);
 	ui->label->setText(QString::number(s_num));
+	list.append("6");
 
 }
 
@@ -205,6 +215,7 @@ void QtCalc::on_pushButton_11_clicked()
 	}
 	s_num = append_num(s_num, 7);
 	ui->label->setText(QString::number(s_num));
+	list.append("7");
 
 }
 
@@ -217,6 +228,7 @@ void QtCalc::on_pushButton_12_clicked()
 	}
 	s_num = append_num(s_num, 8);
 	ui->label->setText(QString::number(s_num));
+	list.append("8");
 
 }
 
@@ -229,6 +241,7 @@ void QtCalc::on_pushButton_15_clicked()
 	}
 	s_num = append_num(s_num, 9);
 	ui->label->setText(QString::number(s_num));
+	list.append("9");
 
 }
 
@@ -241,6 +254,7 @@ void QtCalc::on_pushButton_14_clicked()
 	}
 	s_num = append_num(s_num, 0);
 	ui->label->setText(QString::number(s_num));
+	list.append("0");
 
 }
 
@@ -265,6 +279,7 @@ void QtCalc::on_pushButton_16_clicked()
 		r_num = s_num;
 		s_num = 0;
 	}
+	list.append(" ^ ");
 }
 
 /* clear button */
@@ -279,7 +294,7 @@ void QtCalc::on_pushButton_17_clicked()
 /* list button */
 void QtCalc::on_pushButton_19_clicked()
 {
-	w_calclist->setL_text("muhammed");
+	w_calclist->setL_text(list);
 }
 
 /* equal action */
