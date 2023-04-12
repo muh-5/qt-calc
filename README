@@ -1,0 +1,29 @@
+qt-calc - Qt calculator
+-----------------------
+qt-calc is simple calculator made by Qt toolkit and Qt Creator with Material Design
+
+Requirements
+------------
+• Qt >= 5.15.7
+• qmake >= 3.1
+• GNU/Linux 64bit or windows 64bit
+• gcc >= 12.2.0 or clang >= 15.0.7 (or similar on windows)
+• GNU Make >= 4.3
+• Qt Creator >= 5 (preferred)
+
+Build
+-----
+in project folder run :
+$ qmake
+$ make
+
+or use Qt Creator's tool
+
+Run
+---
+run :
+./qt-calc
+
+Author and License
+------------------
+see lICENSE file
