@@ -14,8 +14,11 @@ class Calclist : public QDialog
 public:
 	explicit Calclist(QWidget *parent = nullptr);
 	~Calclist();
+
+	/* list text */
 	QString l_text;
 
+	/* set list text from 'qtcalc' window to use it in 'calclist' window */
 	void setL_text(const QString &newL_text);
 
 private:

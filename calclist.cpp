@@ -13,6 +13,10 @@ Calclist::~Calclist()
 	delete ui;
 }
 
+/*
+ * set list text from 'qtcalc' window to use it in 'calclist' window
+ * then show the window
+*/
 void Calclist::setL_text(const QString &newL_text)
 {
 	l_text = newL_text;
